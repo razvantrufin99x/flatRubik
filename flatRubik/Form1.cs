@@ -16,6 +16,11 @@ namespace flatRubik
         {
             InitializeComponent();
         }
+
+        public bool _DESIGNMODEONLY = false;
+        public bool _DEBUGMODEONLY = false;
+
+
         public Graphics g;
         public Font font0;
         public Font fontmin;
@@ -35,6 +40,37 @@ namespace flatRubik
         public double scos = Math.Cos((1) / (180 / Math.PI)) * (100 / 2) + 70;
         public double prevx;
         public double prevy;
+
+        public List<ball> l1 = new List<ball>();
+       
+
+        public int currentMousePositionX = 0;
+        public int currentMousePositionY = 0;
+
+        public List<Point> mousePressedDown = new List<Point>(); 
+
+        public List<Color> colors = new List<Color>();
+
+
+        //not real colors just a list
+        public void loadColors() { 
+            colors.Add(new Color());
+            colors[0] = Color.White;
+            colors.Add(new Color());
+            colors[1] = Color.Black;
+            colors.Add(new Color());
+            colors[2] = Color.Red;
+            colors.Add(new Color());
+            colors[3] = Color.Blue;
+            colors.Add(new Color());
+            colors[4] = Color.Yellow;
+            colors.Add(new Color());
+            colors[5] = Color.Green;
+            colors.Add(new Color());
+          
+
+        }
+
 
 
         public void clear()
@@ -247,7 +283,171 @@ namespace flatRubik
             }
         }
 
+        public void loadPositionsIntoBalls()
+        {
+            if (_DESIGNMODEONLY == true) { 
+                if (listofpositionsXY.Length != 108) { Text = "eroare lista " + listofpositionsXY.Length.ToString(); }
+                else if (listofpositionsXY.Length == 108) { Text = " lista OK " + listofpositionsXY.Length.ToString(); }
+            }
+            int j = 0;
+            for (int i = 0; i < 108; i += 2)
+            {
 
+                this.l1[j].Left = this.listofpositionsXY[i];
+                this.l1[j].Top = this.listofpositionsXY[i + 1];
+
+                if (_DEBUGMODEONLY == true)
+                {
+                    string s = i.ToString() + ":" + this.l1[j].Left.ToString() + ";" + this.l1[j].Top.ToString();
+                     s += "; " +j.ToString() + ";" +this.l1[j].BackColor.ToString() + "\r\n";
+                    this.textBox1.Text += s;
+                    g.DrawString(s,font0,brush0,new Point(this.l1[j].Left, this.l1[j].Top));
+                }
+                    j++;
+            }
+           
+
+
+        }
+
+        public int[] listofpositionsXY = {
+            221,
+            462,
+            225,
+            437,
+            230,
+            415,
+            285,
+            344,
+            307,
+            335,
+            329,
+            325,
+            410,
+            325,
+            433,
+            334,
+            457,
+            347,
+            510,
+            414,
+            513,
+            436,
+            519,
+            463,
+            195,
+            456,
+            198,
+            431,
+            207,
+            407,
+            279,
+            320,
+            300,
+            307,
+            323,
+            301,
+            417,
+            299,
+            439,
+            309,
+            460,
+            317,
+            532,
+            407,
+            536,
+            427,
+            543,
+            456,
+            172,
+            444,
+            177,
+            420,
+            185,
+            393,
+            275,
+            294,
+            297,
+            284,
+            319,
+            279,
+            418,
+            275,
+            445,
+            283,
+            469,
+            295,
+            553,
+            391,
+            563,
+            420,
+            567,
+            443,
+            323,
+            407,
+            343,
+            395,
+            366,
+            382,
+            366,
+            161,
+            348,
+            148,
+            326,
+            133,
+            343,
+            426,
+            367,
+            416,
+            387,
+            396,
+            389,
+            147,
+            368,
+            128,
+            345,
+            115,
+            371,
+            446,
+            395,
+            429,
+            413,
+            408,
+            414,
+            132,
+            398,
+            114,
+            371,
+            97
+        };
+
+        public void addAllBalsToForm() {
+            int indexculoare = 0;
+            if (_DEBUGMODEONLY) {
+                if (this.l1.Count != 54) {
+                    Text = "error list not egal cu 54";
+                }
+            }
+            for (int i = 0; i < this.l1.Count; i++)
+            {
+                this.Controls.Add(l1[i]);
+                this.l1[i].Visible = true;
+                this.l1[i].setColor(colors[indexculoare]);
+                if (i == 9 || i == 18 || i == 27 || i == 36 || i == 45) { indexculoare++; }   
+            }
+            
+        }
+        public void addBallsInLists()
+        {
+            for (int i = 0; i < 54; i++)
+            {
+                this.l1.Add(new ball());
+
+            }
+           
+
+           
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -255,6 +455,9 @@ namespace flatRubik
             font0 = new Font("Tahoma", 8);
             fontmin = new Font("Tahoma", 2);
             g = CreateGraphics();
+
+
+           
 
             prevx = scos;
             prevy = sint;
@@ -266,6 +469,42 @@ namespace flatRubik
             drawcircle2();
             drawcircle3();
             drawcircle4();
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            currentMousePositionX = e.X;
+            currentMousePositionY = e.Y;
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (_DESIGNMODEONLY == true)
+            {
+                mousePressedDown.Add(new Point(e.X, e.Y));
+                this.textBox1.Text += e.X.ToString();
+                this.textBox1.Text += "\r\n";
+                this.textBox1.Text += e.Y.ToString();
+                this.textBox1.Text += "\r\n";
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (_DESIGNMODEONLY == false)
+            {
+                this.textBox1.Visible = false;
+                this.button2.Visible = false;
+            }
+            if(_DEBUGMODEONLY == true)
+            {
+                this.textBox1.Visible = true;
+            }
+            loadColors();
+            addBallsInLists();
+            addAllBalsToForm();
+            loadPositionsIntoBalls();
+            
         }
     }
 }
