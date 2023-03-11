@@ -583,54 +583,54 @@ namespace flatRubik
         public List<int> indexListC21 = new List<int>();
         public void addBallsIndexesIntoC21()
         {
+            indexListC21.Add(26);
+            indexListC21.Add(14);
+            indexListC21.Add(2);
             indexListC21.Add(36);
             indexListC21.Add(37);
             indexListC21.Add(38);
-            indexListC21.Add(39);
-            indexListC21.Add(40);
-            indexListC21.Add(41);
-            indexListC21.Add(2);
-            indexListC21.Add(14);
-            indexListC21.Add(26);
             indexListC21.Add(6);
             indexListC21.Add(18);
             indexListC21.Add(30);
+            indexListC21.Add(39);
+            indexListC21.Add(40);
+            indexListC21.Add(41);
 
 
         }
         public List<int> indexListC22 = new List<int>();
         public void addBallsIndexesIntoC22()
         {
+            indexListC22.Add(25);
+            indexListC22.Add(13);
+            indexListC22.Add(1);
             indexListC22.Add(42);
             indexListC22.Add(43);
             indexListC22.Add(44);
-            indexListC22.Add(45);
-            indexListC22.Add(46);
-            indexListC22.Add(47);
-            indexListC22.Add(1);
-            indexListC22.Add(13);
-            indexListC22.Add(25);
             indexListC22.Add(7);
             indexListC22.Add(19);
             indexListC22.Add(31);
+            indexListC22.Add(45);
+            indexListC22.Add(46);
+            indexListC22.Add(47);
 
 
         }
         public List<int> indexListC23 = new List<int>();
         public void addBallsIndexesIntoC23()
         {
+            indexListC23.Add(24);
+            indexListC23.Add(1);
+            indexListC23.Add(0);
             indexListC23.Add(48);
             indexListC23.Add(49);
             indexListC23.Add(50);
+            indexListC23.Add(9);
+            indexListC23.Add(20);
+            indexListC23.Add(32);
             indexListC23.Add(51);
             indexListC23.Add(52);
             indexListC23.Add(53);
-            indexListC23.Add(0);
-            indexListC23.Add(12);
-            indexListC23.Add(24);
-            indexListC23.Add(18);
-            indexListC23.Add(20);
-            indexListC23.Add(32);
             
 
         }
@@ -638,18 +638,18 @@ namespace flatRubik
         public List<int> indexListC31 = new List<int>();
         public void addBallsIndexesIntoC31()
         {
-            indexListC31.Add(5);
-            indexListC31.Add(17);
+            indexListC31.Add(51);
+            indexListC31.Add(45);
+            indexListC31.Add(39);
             indexListC31.Add(29);
-            indexListC31.Add(9);
-            indexListC31.Add(21);
-            indexListC31.Add(33);
+            indexListC31.Add(17);
+            indexListC31.Add(5);
             indexListC31.Add(38);
             indexListC31.Add(44);
             indexListC31.Add(50);
-            indexListC31.Add(39);
-            indexListC31.Add(45);
-            indexListC31.Add(51);
+            indexListC31.Add(9);
+            indexListC31.Add(21);
+            indexListC31.Add(33);
             
 
 
@@ -657,36 +657,36 @@ namespace flatRubik
         public List<int> indexListC32 = new List<int>();
         public void addBallsIndexesIntoC32()
         {
-            indexListC32.Add(4);
-            indexListC32.Add(16);
+            indexListC32.Add(52);
+            indexListC32.Add(46);
+            indexListC32.Add(40);
             indexListC32.Add(28);
-            indexListC32.Add(10);
-            indexListC32.Add(22);
-            indexListC32.Add(34);
+            indexListC32.Add(16);
+            indexListC32.Add(4);
             indexListC32.Add(37);
             indexListC32.Add(43);
             indexListC32.Add(49);
-            indexListC32.Add(40);
-            indexListC32.Add(46);
-            indexListC32.Add(52);
+            indexListC32.Add(10);
+            indexListC32.Add(22);
+            indexListC32.Add(34);
 
 
         }
         public List<int> indexListC33 = new List<int>();
         public void addBallsIndexesIntoC33()
         {
-            indexListC33.Add(3);
-            indexListC33.Add(15);
+            indexListC33.Add(53);
+            indexListC33.Add(47);
+            indexListC33.Add(41);
             indexListC33.Add(27);
-            indexListC33.Add(11);
-            indexListC33.Add(23);
-            indexListC33.Add(35);
+            indexListC33.Add(15);
+            indexListC33.Add(3);
             indexListC33.Add(36);
             indexListC33.Add(42);
             indexListC33.Add(48);
-            indexListC33.Add(41);
-            indexListC33.Add(47);
-            indexListC33.Add(52);
+            indexListC33.Add(11);
+            indexListC33.Add(23);
+            indexListC33.Add(35);
 
 
         }
