@@ -734,11 +734,11 @@ namespace flatRubik
             //do not work
             Color aux;
 
-            aux = pl[pi.Count - 1].BackColor;
+            aux = pl[pi[pi.Count - 1]].BackColor;
 
-            for (int i = pi.Count - 1; i > 0; i--)
+            for (int i = pi.Count - 1; i>0; i--)
             {
-                pl[pi[i - 1]].BackColor = pl[pi[i]].BackColor;
+                pl[pi[i]].BackColor = pl[pi[i-1]].BackColor;
 
             }
             pl[pi[0]].BackColor = aux;
@@ -811,6 +811,46 @@ namespace flatRubik
         private void button12_Click(object sender, EventArgs e)
         {
             rotateToLeft(ref indexListC33, ref l1);
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            rotateToRight(ref indexListC12, ref l1);
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            rotateToRight(ref indexListC13, ref l1);
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            rotateToRight(ref indexListC21, ref l1);
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            rotateToRight(ref indexListC22, ref l1);
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            rotateToRight(ref indexListC23, ref l1);
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            rotateToRight(ref indexListC31, ref l1);
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            rotateToRight(ref indexListC32, ref l1);
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            rotateToRight(ref indexListC33, ref l1);
         }
     }
 }
