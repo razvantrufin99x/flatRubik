@@ -489,14 +489,14 @@ namespace flatRubik
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        public void drawwallballs()
         {
             if (_DESIGNMODEONLY == false)
             {
                 this.textBox1.Visible = false;
                 this.button2.Visible = false;
             }
-            if(_DEBUGMODEONLY == true)
+            if (_DEBUGMODEONLY == true)
             {
                 this.textBox1.Visible = true;
             }
@@ -504,7 +504,313 @@ namespace flatRubik
             addBallsInLists();
             addAllBalsToForm();
             loadPositionsIntoBalls();
+            //add indexes
+            addBallsIndexesIntoC11();
+            addBallsIndexesIntoC12();
+            addBallsIndexesIntoC13();
+
+            addBallsIndexesIntoC21();
+            addBallsIndexesIntoC22();
+            addBallsIndexesIntoC23();
+
+            addBallsIndexesIntoC31();
+            addBallsIndexesIntoC32();
+            addBallsIndexesIntoC33();
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            drawwallballs();
+        }
+
+
+
+
+        public List<int> indexListC11 = new List<int>();
+        
+        public void addBallsIndexesIntoC11() { 
+            indexListC11.Add(0);
+            indexListC11.Add(1);
+            indexListC11.Add(2);
+            indexListC11.Add(3);
+            indexListC11.Add(4);
+            indexListC11.Add(5);
+            indexListC11.Add(6);
+            indexListC11.Add(7);
+            indexListC11.Add(8);
+            indexListC11.Add(9);
+            indexListC11.Add(10);
+            indexListC11.Add(11);
+
+
+        }
+        public List<int> indexListC12 = new List<int>();
+        public void addBallsIndexesIntoC12()
+        {
+            indexListC12.Add(12);
+            indexListC12.Add(13);
+            indexListC12.Add(14);
+            indexListC12.Add(15);
+            indexListC12.Add(16);
+            indexListC12.Add(17);
+            indexListC12.Add(18);
+            indexListC12.Add(19);
+            indexListC12.Add(20);
+            indexListC12.Add(21);
+            indexListC12.Add(22);
+            indexListC12.Add(23);
+
+
+        }
+        public List<int> indexListC13 = new List<int>();
+        public void addBallsIndexesIntoC13()
+        {
+            indexListC13.Add(24);
+            indexListC13.Add(25);
+            indexListC13.Add(26);
+            indexListC13.Add(27);
+            indexListC13.Add(28);
+            indexListC13.Add(29);
+            indexListC13.Add(30);
+            indexListC13.Add(31);
+            indexListC13.Add(32);
+            indexListC13.Add(33);
+            indexListC13.Add(34);
+            indexListC13.Add(35);
+
+
+        }
+
+        public List<int> indexListC21 = new List<int>();
+        public void addBallsIndexesIntoC21()
+        {
+            indexListC21.Add(36);
+            indexListC21.Add(37);
+            indexListC21.Add(38);
+            indexListC21.Add(39);
+            indexListC21.Add(40);
+            indexListC21.Add(41);
+            indexListC21.Add(2);
+            indexListC21.Add(14);
+            indexListC21.Add(26);
+            indexListC21.Add(6);
+            indexListC21.Add(18);
+            indexListC21.Add(30);
+
+
+        }
+        public List<int> indexListC22 = new List<int>();
+        public void addBallsIndexesIntoC22()
+        {
+            indexListC22.Add(42);
+            indexListC22.Add(43);
+            indexListC22.Add(44);
+            indexListC22.Add(45);
+            indexListC22.Add(46);
+            indexListC22.Add(47);
+            indexListC22.Add(1);
+            indexListC22.Add(13);
+            indexListC22.Add(25);
+            indexListC22.Add(7);
+            indexListC22.Add(19);
+            indexListC22.Add(31);
+
+
+        }
+        public List<int> indexListC23 = new List<int>();
+        public void addBallsIndexesIntoC23()
+        {
+            indexListC23.Add(48);
+            indexListC23.Add(49);
+            indexListC23.Add(50);
+            indexListC23.Add(51);
+            indexListC23.Add(52);
+            indexListC23.Add(53);
+            indexListC23.Add(0);
+            indexListC23.Add(12);
+            indexListC23.Add(24);
+            indexListC23.Add(18);
+            indexListC23.Add(20);
+            indexListC23.Add(32);
             
+
+        }
+
+        public List<int> indexListC31 = new List<int>();
+        public void addBallsIndexesIntoC31()
+        {
+            indexListC31.Add(5);
+            indexListC31.Add(17);
+            indexListC31.Add(29);
+            indexListC31.Add(9);
+            indexListC31.Add(21);
+            indexListC31.Add(33);
+            indexListC31.Add(38);
+            indexListC31.Add(44);
+            indexListC31.Add(50);
+            indexListC31.Add(39);
+            indexListC31.Add(45);
+            indexListC31.Add(51);
+            
+
+
+        }
+        public List<int> indexListC32 = new List<int>();
+        public void addBallsIndexesIntoC32()
+        {
+            indexListC32.Add(4);
+            indexListC32.Add(16);
+            indexListC32.Add(28);
+            indexListC32.Add(10);
+            indexListC32.Add(22);
+            indexListC32.Add(34);
+            indexListC32.Add(37);
+            indexListC32.Add(43);
+            indexListC32.Add(49);
+            indexListC32.Add(40);
+            indexListC32.Add(46);
+            indexListC32.Add(52);
+
+
+        }
+        public List<int> indexListC33 = new List<int>();
+        public void addBallsIndexesIntoC33()
+        {
+            indexListC33.Add(3);
+            indexListC33.Add(15);
+            indexListC33.Add(27);
+            indexListC33.Add(11);
+            indexListC33.Add(23);
+            indexListC33.Add(35);
+            indexListC33.Add(36);
+            indexListC33.Add(42);
+            indexListC33.Add(48);
+            indexListC33.Add(41);
+            indexListC33.Add(47);
+            indexListC33.Add(52);
+
+
+        }
+
+
+        public List<int> groupA = new List<int>();
+        public List<int> groupB = new List<int>();
+        public List<int> groupC = new List<int>();
+        public List<int> groupD = new List<int>();
+        public List<int> groupE = new List<int>();
+
+
+
+        //muta in stanga cu 0 pozitie culorile nu pozitiile care vor fi fixe
+        //0 1 2 3 4 5 6 7 8 9 10 11 
+        //1 2 3 4 5 6 7 8 9 10 11 0
+
+        public void rotateToLeft(ref List<int> pi, ref List<ball> pl)
+        {
+            Color aux;
+             
+            aux = pl[pi[0]].BackColor;
+
+
+
+            for (int i = 0; i < pi.Count - 1; i++)
+            {
+                pl[pi[i]].BackColor = pl[pi[i + 1]].BackColor;
+
+            }
+            pl[pi.Count - 1].BackColor = aux;
+
+
+        }
+
+        //0 1 2 3 4 5 6 7 8 9 10 11 
+        //11 0 1 2 3 4 5 6 7 8 9 10
+
+        //trebuie sa folosesc indecsii din indexListC11 nu ball's din l1
+
+        //muta in dreapta cu 0 pozitie culorile nu pozitiile care vor fi fixe
+        public void rotateToRight(ref List<int> pi ,ref List<ball> pl)
+        {
+
+            //do not work
+            Color aux;
+
+            aux = pl[pi.Count - 1].BackColor;
+
+            for (int i = pi.Count - 1; i > 0; i--)
+            {
+                pl[pi[i - 1]].BackColor = pl[pi[i]].BackColor;
+
+            }
+            pl[pi[0]].BackColor = aux;
+
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //tostanga c11
+            //trebuie sa strimit o lista cu ball nu cu int pe care nu o am o sublista a
+            //lui l1 lista tuturor ball's creata dupa lista indexListC11 cu indecsi
+            rotateToLeft(ref indexListC11, ref l1);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //todreapta c11
+            //trebuie sa strimit o lista cu ball nu cu int pe care nu o am o sublista a
+            //lui l1 lista tuturor ball's creata dupa lista indexListC11 cu indecsi
+            rotateToRight(ref indexListC11, ref l1);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.button1.Visible = false;
+            this.button3.Visible = false;
+            this.button6.Visible = false;
+            drawcircle2();
+            drawcircle3();
+            drawcircle4();
+            drawwallballs();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            rotateToLeft(ref indexListC12, ref l1);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            rotateToLeft(ref indexListC13, ref l1);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            rotateToLeft(ref indexListC23, ref l1);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            rotateToLeft(ref indexListC21, ref l1);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            rotateToLeft(ref indexListC22, ref l1);
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            rotateToLeft(ref indexListC31, ref l1);
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            rotateToLeft(ref indexListC32, ref l1);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            rotateToLeft(ref indexListC33, ref l1);
         }
     }
 }
