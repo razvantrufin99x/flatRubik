@@ -620,12 +620,12 @@ namespace flatRubik
         public void addBallsIndexesIntoC23()
         {
             indexListC23.Add(24);
-            indexListC23.Add(1);
+            indexListC23.Add(12);
             indexListC23.Add(0);
             indexListC23.Add(48);
             indexListC23.Add(49);
             indexListC23.Add(50);
-            indexListC23.Add(9);
+            indexListC23.Add(8);
             indexListC23.Add(20);
             indexListC23.Add(32);
             indexListC23.Add(51);
@@ -717,7 +717,7 @@ namespace flatRubik
                 pl[pi[i]].BackColor = pl[pi[i + 1]].BackColor;
 
             }
-            pl[pi.Count - 1].BackColor = aux;
+            pl[pi[pi.Count - 1]].BackColor = aux;
 
 
         }
